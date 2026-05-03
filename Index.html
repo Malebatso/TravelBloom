@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TravelBloom | Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="index.html">TravelBloom</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="search-wrapper">
+      <label class="visually-hidden" for="destinationInput">Search</label>
+      <input id="destinationInput" type="text" placeholder="Search: beach, temple, or country" />
+      <button id="searchBtn" type="button">Search</button>
+      <button id="clearBtn" type="button" class="clear-btn">Clear</button>
+    </div>
+  </header>
+
+  <main class="hero">
+    <div class="overlay"></div>
+    <section class="hero-content">
+      <p class="eyebrow">FIND YOUR NEXT ADVENTURE</p>
+      <h1>Explore Dream Destinations with TravelBloom</h1>
+      <p class="intro">
+        Discover curated beach escapes, spiritual temple journeys, and country-based recommendations that help you
+        experience culture, nature, and unforgettable memories.
+      </p>
+      <button class="book-btn" type="button">Book Now</button>
+
+      <section class="recommendations" aria-live="polite">
+        <h2>Recommendations</h2>
+        <div id="resultsContainer" class="card-grid"></div>
+      </section>
+    </section>
+
+    <aside class="social-links" aria-label="Social links">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">YouTube</a>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

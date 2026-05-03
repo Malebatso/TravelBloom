@@ -1,0 +1,62 @@
+:root {
+  --primary: #00bcd4;
+  --bg-dark: rgba(4, 20, 35, 0.65);
+  --text-light: #f6fbff;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; color: var(--text-light); }
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 50;
+}
+.logo { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.35rem; }
+
+.nav-links { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; }
+.nav-links a { color: #fff; text-decoration: none; }
+.nav-links a.active, .nav-links a:hover { color: var(--primary); }
+
+.search-wrapper { display: flex; gap: 0.4rem; align-items: center; }
+.search-wrapper input, .search-wrapper button { padding: 0.55rem 0.7rem; border: none; border-radius: 6px; }
+.search-wrapper button { background: var(--primary); font-weight: 700; cursor: pointer; }
+.clear-btn { background: #d9e4ea !important; }
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  background: url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
+  padding: 7rem 1.5rem 2rem;
+}
+.overlay { position: absolute; inset: 0; background: var(--bg-dark); }
+.hero-content { position: relative; z-index: 1; max-width: 1000px; margin: 0 auto; }
+
+.eyebrow { letter-spacing: 0.08em; font-weight: 700; color: #9edfff; }
+.intro { max-width: 760px; line-height: 1.6; }
+.book-btn { background: var(--primary); border: none; padding: 0.75rem 1rem; border-radius: 8px; font-weight: 700; margin-bottom: 1.2rem; }
+
+.social-links { position: absolute; z-index: 1; left: 1rem; top: 45%; display: flex; flex-direction: column; gap: 0.5rem; }
+.social-links a { color: #d9f5ff; text-decoration: none; }
+
+.recommendations { margin-top: 1rem; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; }
+.card { background: rgba(255, 255, 255, 0.1); border-radius: 10px; overflow: hidden; }
+.card img { width: 100%; height: 150px; object-fit: cover; display: block; }
+.card-body { padding: 0.8rem; }
+.card-body p { margin: 0.4rem 0 0; line-height: 1.45; }
+
+.visually-hidden { position: absolute; left: -9999px; }
+.simple-page { background: linear-gradient(180deg, #123a67, #1b4f84); min-height: 100vh; }
+.content-page { padding: 7rem 1.5rem 2rem; max-width: 900px; margin: 0 auto; }
+.contact-form { display: grid; gap: 0.6rem; max-width: 520px; }
+.contact-form input, .contact-form textarea { padding: 0.65rem; border-radius: 6px; border: none; }
+.contact-form button { width: fit-content; padding: 0.65rem 1rem; border: none; border-radius: 6px; background: var(--primary); font-weight: 700; }
